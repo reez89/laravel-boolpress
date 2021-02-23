@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('posts', 'PostController');
 Route::get('/', 'PageController@home')->name('home');
 Route::get('about', 'PageController@about')->name('about');
 Route::get('contacts', 'PageController@contacts')->name('contacts');

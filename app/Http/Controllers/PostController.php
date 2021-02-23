@@ -13,8 +13,8 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        return view('posts.index');
     }
 
     /**
@@ -46,7 +46,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        
     }
 
     /**

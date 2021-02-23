@@ -29,7 +29,7 @@
                 <a class="nav-link" href="{{ url('contacts') }}">CONTACTS</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link " href="{{ url('articles') }}">ARTICLES</a>
+                <a class="nav-link " href="{{ route('posts.index') }}">ARTICLES</a>
                 </li>
             </ul>
             </div>
@@ -40,5 +40,7 @@
         <main>
             @yield('main-content')
         </main>
+
+        <script src="{{ asset('js/app.js')}}"></script>
     </body>
 </html>
