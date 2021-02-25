@@ -7,6 +7,7 @@
 <div id="app">
 
     <posts-component></posts-component>
+    <category-component></category-component>
 
 </div>
 

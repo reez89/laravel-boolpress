@@ -10,13 +10,13 @@
             </tr>
         </thead>
         <tbody >
-                <tr v-for="post in posts" :key = "post">
-                    <td>{{ post.id }}</td>
-                    <td>{{ post.title }}</td>
-                    <td style="display: block; max-width: 150px;" class=" text-truncate">{{ post.body }}</td>
-                    <td>{{ post.created_at }}</td>
-                    <td>{{ post.updated_at }}</td>
-                </tr>
+            <tr v-for="(post, index) in posts" :key = "index">
+                <td>{{ post.id }}</td>
+                <td>{{ post.title }}</td>
+                <td style="display: block; max-width: 150px;" >{{ post.body }}</td>
+                <td>{{ post.created_at }}</td>
+                <td>{{ post.updated_at }}</td>
+            </tr>
         </tbody>
     </table>
 </template>

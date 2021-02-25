@@ -27,3 +27,10 @@ Route::get('posts', function () {
     
     ], 200);
 });
+
+Route::get('category', function () {
+    return response()->json([
+        'success'=>true,
+        'data'=>App\Category::all()
+    ], 200);
+});
