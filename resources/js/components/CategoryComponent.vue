@@ -2,7 +2,7 @@
     
     <ul>
         <li 
-            v-for="category in categories" :key="category">
+            v-for="(category, index) in categories" :key="index">
                 {{ category.title }} : {{ category.body }}
         </li>
     </ul>
