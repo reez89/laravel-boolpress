@@ -16,7 +16,8 @@ class AddForeignToPostsTable extends Migration
         Schema::table('posts', function (Blueprint $table) {
 
             $table
-                ->unsignedBigInteger('category_id');
+                ->unsignedBigInteger('category_id')
+                ->nullable();
 
             $table
                 ->foreign('category_id')
