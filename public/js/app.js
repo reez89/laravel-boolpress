@@ -1919,19 +1919,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      category: ""
+      categories: []
     };
   },
   mounted: function mounted() {
+    var _this = this;
+
     console.log('Component mounted.');
+    axios.get('api/category').then(function (response) {
+      _this.categories = response.data.data;
+      console.log('this.category');
+    });
   }
 });
 
@@ -37640,32 +37641,17 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
-            ])
-          ])
-        ])
+  return _c(
+    "ul",
+    _vm._l(_vm.categories, function(category) {
+      return _c("li", { key: category }, [
+        _vm._v("\n            " + _vm._s(category.title) + "\n    ")
       ])
-    ])
-  }
-]
+    }),
+    0
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

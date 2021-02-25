@@ -1,28 +1,30 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
+    
+    <ul>
+        <li 
+            v-for="category in categories" :key="category">
+                {{ category.title }}
+        </li>
+    </ul>
 
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </template>
 
 <script>
     export default {
         data(){
             return {
-                category:""
+                categories:[]
             }
         },
         mounted() {
             console.log('Component mounted.')
+            axios
+            .get('api/category')
+            .then(response =>{
+                this.categories = response.data.data;
+                console.log('this.category');
+            })
+
         }
     }
 </script>
