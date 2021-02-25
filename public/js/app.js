@@ -37645,7 +37645,13 @@ var render = function() {
     "ul",
     _vm._l(_vm.categories, function(category) {
       return _c("li", { key: category }, [
-        _vm._v("\n            " + _vm._s(category.title) + "\n    ")
+        _vm._v(
+          "\n            " +
+            _vm._s(category.title) +
+            " : " +
+            _vm._s(category.body) +
+            "\n    "
+        )
       ])
     }),
     0
