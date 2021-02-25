@@ -13,7 +13,6 @@ class PostSeeder extends Seeder
     {
         for ($i = 0; $i < 10; $i++){
             $newPost = new Post();
-            $newPost->id = $faker->randomDigit(2);
             $newPost->title = $faker->word(10);
             $newPost->body = $faker->text(50);
             $newPost->save();    
