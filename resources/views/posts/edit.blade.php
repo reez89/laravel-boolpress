@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layout.app')
 @section('title')
     Post EDIT
 @endsection
-@section('content')
+@section('main-content')
 <form  action="{{ route('posts.update', $post) }}" class="form-group" method="post">
   @csrf
   @method('PUT')
